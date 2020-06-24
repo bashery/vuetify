@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head><!--<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">-->
+        <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+        <!--<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">-->
+        <link rel="manifest" href="/site.webmanifest">
+        <meta charset="utf-8">
+        <script src="vuedev.js">// Todo : move vue.min.j here </script>
+        <title>Tweets</title>
+    </head>
+<body>
+<div id="app8">
+<ol>
+  <!-- Create an instance of the todo-item component -->
+  <todo-item 
+    v-for="item in todos"
+    v-bind:todo="item"
+    v-bind:key='item.id'
+
+      ></todo-item>
+</ol>
+</div>
+
+    <div id="app6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div> <br>
+    <div id="app5">
+        <button v-on:click="reverseMsg">reverse</button>
+        app5 : {{message}}
+    </div><br>
+    <div id="app4">
+        app4 : 
+        <ol>
+            <li v-for="todo in todos">{{todo.text}}</li>
+        </ol>
+    </div><br>
+    <button id='app7' v-on:click="toggle">toggle</button>
+    <div id="app3" v-if="show">
+        app3 :
+        toggle this by vue
+    </div><br>
+    <script src="app.js"></script>
+</body>
+</html>
